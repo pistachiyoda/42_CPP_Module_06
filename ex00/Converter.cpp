@@ -160,17 +160,17 @@ void Converter::convertToChar() const
         val = inputChar_;
         break;
     case Int:
-        if (inputType_ > std::numeric_limits<char>::max() || inputType_ < std::numeric_limits<char>::min())
+        if (inputInt_ > std::numeric_limits<char>::max() || inputInt_ < std::numeric_limits<char>::min())
             return printImpossible();
         val = static_cast<char>(inputInt_);
         break;
     case Float:
-        if (inputType_ > std::numeric_limits<char>::max() || inputType_ < std::numeric_limits<char>::min())
+        if (inputFloat_ > std::numeric_limits<char>::max() || inputFloat_ < std::numeric_limits<char>::min())
             return printImpossible();
         val = static_cast<char>(inputFloat_);
         break;
     case Double:
-        if (inputType_ > std::numeric_limits<char>::max() || inputType_ < std::numeric_limits<char>::min())
+        if (inputDouble_ > std::numeric_limits<char>::max() || inputDouble_ < std::numeric_limits<char>::min())
             return printImpossible();
         val = static_cast<char>(inputDouble_);
         break;
