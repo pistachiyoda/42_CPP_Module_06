@@ -68,9 +68,6 @@ bool Converter::isInt() const
     return true;
 }
 
-// floatの入力をうまく検知できていなさそう？
-// ./convert 10.1f
-// で全てimpossibleになってしまう
 bool Converter::isFloat() const
 {
     bool hasDot = false;
@@ -113,6 +110,9 @@ bool Converter::isDouble() const
 
 void Converter::setValues()
 {
+    if (input_[input_.length() - 1] == 'f')
+        input_ = input_.erase(input_.length() - 1, 1);
+    
     std::stringstream ss;
     ss << input_;
 
@@ -126,6 +126,7 @@ void Converter::setValues()
             break;
         case Float:
             ss >> inputFloat_;
+            break;
         case Double:
             ss >> inputDouble_;
             break;
