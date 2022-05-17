@@ -25,8 +25,6 @@ public:
     Converter &operator=(const Converter &converter);
     ~Converter();
     void convert() const;
-    // std::string getInput() const;
-    // InputType getInputType() const;
 private:
     std::string input_;
     InputType inputType_;
