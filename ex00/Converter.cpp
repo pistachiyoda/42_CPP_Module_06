@@ -227,7 +227,7 @@ void Converter::convertToFloat() const
         val = inputFloat_;
         break;
     case Double:
-        if (inputDouble_ > std::numeric_limits<float>::max() || inputDouble_ < std::numeric_limits<float>::min())
+        if (inputDouble_ > std::numeric_limits<float>::max() || inputDouble_ < std::numeric_limits<float>::max() * -1)
             return printImpossible();
         val = static_cast<float>(inputDouble_);
         break;
