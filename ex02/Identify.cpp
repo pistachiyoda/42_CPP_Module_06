@@ -2,11 +2,11 @@
 
 void identify(Base *p)
 {
-    if (dynamic_cast<A *>(p))
+    if (dynamic_cast<A *>(p) != nullptr)
         std::cout << "A" << std::endl;
-    else if (dynamic_cast<B *>(p))
+    else if (dynamic_cast<B *>(p) != nullptr)
         std::cout << "B" << std::endl;
-    else if (dynamic_cast<C *>(p))
+    else if (dynamic_cast<C *>(p) != nullptr)
         std::cout << "C" << std::endl;
 }
 
